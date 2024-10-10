@@ -1,95 +1,68 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
+import Mathtexture from "./assets/mathtexture.jpg"
+import Imagemath from "./assets/imagemath.jpg"
+import Arrow from "./assets/Arrow.svg"
+import NavBar from "./components/NavBar";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0 })
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+  };
+
+  return (
+    <>
+    <section className={styles.container}>
+      <div className={styles.sectioncontent}>
+        <div className={styles.header}>
+          <NavBar />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className={styles.mainpage}>
+          <Image src={Arrow} alt="flèche" height={450} />
+          <div className={styles.title} onMouseMove={handleMouseMove}>
+            <div className={styles.animhover} >
+              <h1 className={styles.cyberviking}>CYBERVIKING</h1>
+              <Image src={Mathtexture} className={styles.hoverImage} alt="image author hover"
+              style={{
+                top: `${cursorPosition.y}px`,
+                left: `${cursorPosition.x}px`,
+                transform: 'translate(-50%, -50%)',
+              }}
+              />
+            </div>
+          <div className={styles.subtitle}>
+            <p>&quot;transforme ton corps en art&quot;</p>
+            <span>Tattoo</span>
+            </div>
+          </div>
+          <div className={styles.reso}>
+            <p>instagram</p>
+            <p>mail</p>
+          </div>
+        </div>
+        <div className={styles.footermain}>
+          <div className={styles.imagefootermain}>
+            <div className={styles.imagetext}>
+              <h2>Mes <br /> projets</h2>
+              <Image src={Imagemath} alt="image projet" width={200} height={200}/>
+            </div>
+            <div className={styles.imagetext}>
+              <h2>Me <br /> contacter</h2>
+              <Image src={Imagemath} alt="image projet" width={200} height={200}/>
+            </div>
+          </div>
+          <h2>SCROLL</h2>
+          <div className={styles.texticone}>
+            <p>Tattoo artist basé à Glomel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </>
   );
 }

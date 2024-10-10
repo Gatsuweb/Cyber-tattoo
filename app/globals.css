@@ -1,42 +1,62 @@
+@font-face {
+  font-family: "Deutsch";
+  src: url("./fonts/Deutsch.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Rosehot";
+  src: url("./fonts/Rosehot.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Metal";
+  src: url("./fonts/Metal\ Lord.otf") format(truetype);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ --fonttitle: "Metal";
+ --secondaryfont: "Deutsch";
+ --thirdfont: "Rosehot";
+ --margin-horizontal: 2%;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1 {
+  font-family: var(--fonttitle);
+  font-weight: 100;
+  font-size: clamp(6rem, 4.2166rem + 8.1529vw, 14rem);
+  background: linear-gradient(to right, 
+  black 0%,
+  rgb(41, 0, 0) 40%,
+  #803b3b 50%,
+  #8d2b2b  55%,
+  rgb(87, 0, 0) 70%,
+  black 100%
+);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: gradientMove 7s linear infinite;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes gradientMove {
+  0% {
+    background-position: 100% 0;
   }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+p {
+  font-size: clamp(1rem, 0.9108rem + 0.4076vw, 1.4rem);
+  font-family: var(--thirdfont);
+  color: white;
+}
+
+ul {
+  font-family: var(--secondaryfont);
 }
