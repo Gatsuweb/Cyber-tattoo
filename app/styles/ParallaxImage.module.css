@@ -1,0 +1,45 @@
+.containerparallax{
+    height: 50vh;
+    width: 100vw;
+}
+    .parallax{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        margin-top: 5vh;
+    }
+
+
+    /* .parallaxContainer{
+        position: absolute;
+       
+} */
+
+.parallaxContainer {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 60vh;
+    width: 50vh;
+    object-fit: cover;
+
+    &:nth-of-type(1) {
+        z-index: 1;
+    }
+    &:nth-of-type(2) {
+        left: 55vw;
+        top: 40vh;
+        height: 40vh;
+        width: 30vh;
+        z-index: 2;
+    }
+    &:nth-of-type(3) {
+        left: 83vw;
+        top: 40vh;
+        height: 25vh;
+        width: 20vh;
+        z-index: 3;
+    }
+}

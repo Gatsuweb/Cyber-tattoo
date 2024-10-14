@@ -4,13 +4,12 @@
   background-position: center;
   background-size: cover;
 
-
 }
 
 .sectioncontent {
+  height: 100vh;
   margin-left: var(--margin-horizontal);
   margin-right: var(--margin-horizontal);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,7 +27,7 @@
 }
 
 .subtitle span {
-  font-size: 16rem;
+  font-size: clamp(4rem, 1.2308rem + 12.3077vw, 16rem);
   font-family: var(--secondaryfont);
   margin-top: -10%;
   color: transparent; /* Texte transparent */
@@ -52,12 +51,13 @@
   display: flex;
   color: white;
   font-family: var(--thirdfont);
-  gap: 50px;
+
 }
 
 .hoverImage{
   position: absolute;
-  width: 300px; /* Ajuste la taille de l'image */
+  width: 15vw; /* Par exemple */
+/* Ajuste la taille de l'image */
   height: auto;
   rotate: 20deg;
   pointer-events: none; /* Permet d'interagir avec d'autres éléments sous l'image */
@@ -72,20 +72,80 @@
   opacity: 0.8; /* Affiche l'image au survol */
 }
 
-.imagetext {
-  position: relative;
-}
-
-.imagetext h2 {
-  font-size: 1.8rem;
- position: fixed;
+.imagetext{
+  display: flex;
+  mix-blend-mode:multiply;
+  /* filter:; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: cover;
+  color: #803b3b;
+  cursor: pointer;
+ font-size: 5rem;
+ font-weight: 900;
  margin-top: -1%;
  text-transform: uppercase;
  font-family: var(--secondaryfont);
  font-weight: 100;
+ overflow: hidden;
+ transition: all 0.2s linear;
 }
 
-.imagetext img {
-  margin-left: 10%;
-  border-radius: 5%;
+.imagetext:nth-child(1){
+  width: 18%;
+}
+.imagetext:nth-child(3){
+  width: 18.5%;
+}
+
+.imagetext:nth-child(1):hover {
+  width: 40%;
+  overflow: visible;
+}
+.imagespan p{
+  font-size: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: cover;
+  mix-blend-mode:multiply;
+    color: #803b3b;
+
+}
+
+.imagetext:nth-child(3):hover {
+  width: 60%;
+  overflow: visible;
+}
+/* .imagefootermain {
+  font-size: 8rem;
+  font-family: var(--secondaryfont);
+} */
+
+
+@media  screen and (max-width: 1280) {
+  .hoverImage {
+    display: none;
+  }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }

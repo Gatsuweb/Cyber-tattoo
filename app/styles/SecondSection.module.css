@@ -1,0 +1,96 @@
+.littleaboutcontainer {
+    color: white;
+    position: relative;
+    z-index: -1;
+    background-color: black;
+    /* overflow-x: hidden; */
+ 
+}
+
+.littleaboutcontainer section{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+
+.littleaboutcontainer section h1 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range-end: 100px;
+}
+
+
+.littleaboutcontainer section:nth-child(2) p {
+    
+    width: 40%;
+    font-size: 2rem;
+    text-align: justify;
+    margin-left: var(--margin-horizontal);
+    margin-right: var(--margin-horizontal);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range-end: 300px;
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.littleaboutcontainer section:nth-child(3) {
+
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+}
+.littleaboutcontainer section:nth-child(4) {
+    position: static;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000000;
+    text-align: justify;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.littleaboutcontainer section:nth-child(4) p {
+    width: 40vw;
+}
+
+.littleaboutcontainer section:nth-child(5) {
+
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 3%;
+}
+.littleaboutcontainer section:nth-child(6) img {
+    rotate: 20deg;
+    margin-right: 10%;
+
+}
+
+.issou{
+    height: 100vh;
+background-color: #000000;
+z-index: 4;
+/* Contour blanc */
+}
+
+
+

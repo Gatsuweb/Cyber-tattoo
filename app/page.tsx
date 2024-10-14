@@ -1,13 +1,29 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Lenis from 'lenis'
 import Image from "next/image";
 import Mathtexture from "./assets/mathtexture.jpg"
-import Imagemath from "./assets/imagemath.jpg"
 import Arrow from "./assets/Arrow.svg"
 import NavBar from "./components/NavBar";
 import styles from "./page.module.css";
+import SecondSection from "./components/SecondSection";
+
+
 
 export default function Home() {
+  useEffect( () => {
+
+    const lenis = new Lenis()
+  
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+  
+    }
+  
+    requestAnimationFrame(raf)
+  
+  }, [])
   const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0 })
 
   const handleMouseMove = (e) => {
@@ -22,7 +38,7 @@ export default function Home() {
           <NavBar />
         </div>
         <div className={styles.mainpage}>
-          <Image src={Arrow} alt="flèche" height={450} />
+          <Image src={Arrow} alt="flèche" height={300} />
           <div className={styles.title} onMouseMove={handleMouseMove}>
             <div className={styles.animhover} >
               <h1 className={styles.cyberviking}>CYBERVIKING</h1>
@@ -47,13 +63,15 @@ export default function Home() {
         <div className={styles.footermain}>
           <div className={styles.imagefootermain}>
             <div className={styles.imagetext}>
-              <h2>Mes <br /> projets</h2>
-              <Image src={Imagemath} alt="image projet" width={200} height={200}/>
+         
+            <h2>BOOK.</h2>
+            </div>
+            <div className={styles.imagespan}>
+            <p>/</p>
             </div>
             <div className={styles.imagetext}>
-              <h2>Me <br /> contacter</h2>
-              <Image src={Imagemath} alt="image projet" width={200} height={200}/>
-            </div>
+            <h2>GALERIE.</h2>
+            </div> 
           </div>
           <h2>SCROLL</h2>
           <div className={styles.texticone}>
@@ -61,6 +79,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </section>
+    <section>
+      <SecondSection Mathtexture={Mathtexture} />
     </section>
 
     </>
