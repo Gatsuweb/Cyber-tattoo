@@ -4,17 +4,38 @@
 }
 @font-face {
   font-family: "Rosehot";
-  src: url("./fonts/Rosehot.ttf") format(truetype);
+  src: url("./fonts/Crucial-Medium.otf") format(truetype);
 }
 @font-face {
   font-family: "Metal";
   src: url("./fonts/Metal\ Lord.otf") format(truetype);
 }
 
+@font-face {
+  font-family: "Deco";
+  src: url("./fonts//IMFeFlow2.ttf") format(truetype);
+}
+
+@font-face {
+  font-family: "Decobtn";
+  src: url("./fonts//LimeBlossomCaps.ttf") format(truetype);
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/Raleway-Light.ttf") format(truetype);
+}
+@font-face {
+  font-family: "RalewayB";
+  src: url("./fonts/Raleway-Medium.ttf") format(truetype);
+}
+
 :root {
  --fonttitle: "Metal";
  --secondaryfont: "Deutsch";
- --thirdfont: "Rosehot";
+ --thirdfont: "Raleway";
+ --thirdbold: "RalewayB";
+ --decofont: "Deco";
+ --decobtnfont: "Deco";
  --margin-horizontal: 3%;
 }
 
@@ -24,28 +45,26 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
 
 h1 {
   font-family: var(--fonttitle);
   font-weight: 100;
   font-size: clamp(3rem, 4.2166rem + 8.1529vw, 14rem);
   background: linear-gradient(to right, 
-  black 0%,
-  rgb(41, 0, 0) 40%,
-  #803b3b 50%,
-  #8d2b2b  55%,
-  rgb(87, 0, 0) 70%,
-  black 100%
+  rgb(66, 0, 0),
+  rgb(78, 0, 0) 40%,
+  #ff3838 45%,
+  #ec2424  55%,
+  rgb(78, 0, 0) 70%,
+  rgb(66, 0, 0)
 );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-size: 200% 100%;
-  animation: gradientMove 7s linear infinite;
+  animation: gradientMove 5s linear infinite;
 }
+
 @keyframes gradientMove {
   0% {
     background-position: 100% 0;
@@ -57,12 +76,12 @@ h1 {
 
 p {
   font-size: clamp(1rem, 0.9108rem + 0.4076vw, 1.4rem);
-  font-family: var(--thirdfont);
+  font-family: "Rosehot";
   color: white;
 }
 
 ul {
-  font-family: var(--secondaryfont);
+  font-family: var(--thirdbold);
 }
 
 

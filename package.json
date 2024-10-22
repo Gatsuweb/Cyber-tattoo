@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rive-app/canvas": "^2.21.6",
+    "@rive-app/react-canvas": "^4.14.5",
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.30",
     "framer-motion": "^11.11.8",
     "lenis": "^1.1.14",
     "next": "14.2.15",
+    "next-video": "^1.2.0",
     "react": "^18",
     "react-dom": "^18"
   },

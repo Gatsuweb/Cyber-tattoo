@@ -7,7 +7,6 @@ import Picture3 from '../assets/imagemath.jpg';
 import Image from "next/image";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const word = "with framer-motion";
 
 export default function ParallaxImage() {
     const container = useRef(null);
@@ -50,6 +49,8 @@ export default function ParallaxImage() {
                         </motion.div>
                     })
                 }
+
+
             </div>
         </div>
     )

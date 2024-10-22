@@ -4,11 +4,10 @@
     align-items: center;
     animation: appear linear;
     animation-timeline: view();
-    animation-range-end: 400px;
-    font-size: 5rem;
-color: transparent; /* Texte transparent */
--webkit-text-stroke: 2px white;
-height: 100vh;
+    animation-range-end: 800px;
+    color: transparent; /* Texte transparent */
+    -webkit-text-stroke: 2px white;
+    height: 100vh;
 
 }
 
@@ -32,9 +31,14 @@ height: 100vh;
     width: 100%;
     height: 100%;
     cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 6.5rem;
 }
 
 .mask {
+    padding-top: 20px;
     -webkit-mask-image: url("../assets/mask.svg");
     mask-image: url("../assets/mask.svg");
     mask-repeat: no-repeat;
@@ -47,6 +51,7 @@ height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .mask span {

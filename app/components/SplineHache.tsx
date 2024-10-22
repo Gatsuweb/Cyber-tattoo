@@ -1,7 +1,11 @@
-import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline/next';
 
 export default function SplineHache() {
   return (
-    <Spline scene="https://prod.spline.design/sQI04pRahgdXCy2W/scene.splinecode" />
+    <main>
+      <Spline
+        scene="https://prod.spline.design/S694HSAX3T00Uh2V/scene.splinecode" 
+      />
+    </main>
   );
 }

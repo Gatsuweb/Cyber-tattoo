@@ -1,0 +1,115 @@
+.getout {
+    position: sticky;
+    top: 0;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.getout span{
+    opacity: 0;
+}
+
+.artist {
+    margin-top: 4%;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: var(--secondaryfont);
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+
+}
+
+.list {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+.testdefou {
+    column-count: 3;
+    object-fit: cover;
+    width: 40vw;
+}
+
+.divbtngalerie {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    align-items: center;
+    /* padding: 4% 10%; */
+    background-color: #000000;
+    cursor: pointer;
+    gap: 25px;
+}  
+
+.btnGalerie {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: var(--secondaryfont);
+    letter-spacing: 2px;
+    font-size: 6rem;
+    justify-content: start;
+    margin: 6% 0%;
+    cursor: pointer;
+
+
+}
+
+.divbtngalerie .spanHover{
+    font-family: var(--decofont);
+    font-size: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+.divbtngalerie:hover .spanHover {
+
+    animation: reveal 1s forwards;
+}
+
+.list img {
+    width: 100%;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+
+@keyframes rotateanim {
+    from {
+        transform: rotate(0deg);
+        scale: 1;
+        
+    }
+    to {
+        transform: rotate(180deg);
+        scale: 2;
+    };
+    
+}
+
+.animphoto {
+     position: sticky;
+    top: 60px;
+    margin-top: -30%;
+    display: flex;
+    justify-content: end;
+    z-index: -1;
+}
+.widthphoto {
+
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+}
+.photoarigato {
+    height:250px;
+    width:250px;
+    overflow: hidden;
+    animation: rotateanim 1s linear;
+    animation-timeline: view();
+}

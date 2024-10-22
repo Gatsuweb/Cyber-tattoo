@@ -1,39 +1,48 @@
 .littleaboutcontainer {
     color: white;
     position: relative;
-    z-index: -1;
-    background-color: black;
+
     /* overflow-x: hidden; */
  
 }
 
 .littleaboutcontainer section{
+    /* margin: 10% 0%; */
+    overflow: hidden;
+    margin-top: 10%;
+     padding-left: var(--margin-horizontal);
+     padding-right: var(--margin-horizontal);
+
+}
+
+
+.littleaboutcontainer section:nth-child(1) {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range-end: 800px;
+}
+
+.getout {
     position: sticky;
     top: 0;
-    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.littleaboutcontainer section h1 {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range-end: 100px;
+.getout span{
+    opacity: 0;
 }
 
+.artist {
+    margin-top: 4%;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: var(--secondaryfont);
+    color: transparent;
+    -webkit-text-stroke: 1px white;
 
-.littleaboutcontainer section:nth-child(2) p {
-    
-    width: 40%;
-    font-size: 2rem;
-    text-align: justify;
-    margin-left: var(--margin-horizontal);
-    margin-right: var(--margin-horizontal);
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range-end: 300px;
 }
-
-
 
 @keyframes appear {
     from {
@@ -47,50 +56,218 @@
 }
 
 
-.littleaboutcontainer section:nth-child(3) {
-
+.splinecrane {
+    height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 0;
-    z-index: 2;
-
-}
-.littleaboutcontainer section:nth-child(4) {
-    position: static;
-    height: 100vh;
+    top: -200px;
+    z-index: -1;
     overflow: hidden;
-    background-color: #000000;
-    text-align: justify;
-    display: flex;
-    justify-content: end;
-    align-items: center;
 
 }
 
-.littleaboutcontainer section:nth-child(4) p {
+.runes {
+    background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    animation: appear;
+
+}
+
+
+
+.littleaboutcontainer section:last-child {
+    height: 100vh;
+} 
+
+
+
+
+.list {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+}
+.testdefou {
+    column-count: 3;
+    object-fit: cover;
     width: 40vw;
 }
 
-.littleaboutcontainer section:nth-child(5) {
+.divbtngalerie {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    align-items: center;
+    /* padding: 4% 10%; */
+    background-color: #000000;
+    cursor: pointer;
+    gap: 25px;
+}  
 
-    overflow: hidden;
+.btnGalerie {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: var(--secondaryfont);
+    letter-spacing: 2px;
+    font-size: 6rem;
+    justify-content: start;
+    margin: 6% 0%;
+    cursor: pointer;
+
+
+}
+
+.divbtngalerie .spanHover{
+    font-family: var(--decofont);
+    font-size: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+.divbtngalerie:hover .spanHover {
+
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 5rem;
+    }
+}
+
+.list img {
+    width: 100%;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+
+@keyframes rotateanim {
+    from {
+        transform: rotate(0deg);
+        scale: 1;
+        
+    }
+    to {
+        transform: rotate(180deg);
+        scale: 2;
+    };
+    
+}
+
+.animphoto {
+     position: sticky;
+    top: 60px;
+    margin-top: -30%;
     display: flex;
     justify-content: end;
-    align-items: end;
-    padding-bottom: 3%;
+    z-index: -1;
 }
-.littleaboutcontainer section:nth-child(6) img {
-    rotate: 20deg;
-    margin-right: 10%;
+.widthphoto {
 
+    display: flex;
+    justify-content: center;
+    width: 45vw;
+}
+.photoarigato {
+    height:250px;
+    width:250px;
+    overflow: hidden;
+    animation: rotateanim 1s linear;
+    animation-timeline: view();
 }
 
-.issou{
+
+.deuxiemeparagraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
-background-color: #000000;
-z-index: 4;
-/* Contour blanc */
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+}
+
+.deuxiemeparagraph p {
+    width: 45vw;
+}
+
+.parallaxContainer {
+
+    height: 100vh;
+
+    
+}
+/* @keyframes scaleimage {
+    from{
+
+        scale: 1;
+
+    }
+    to {
+        scale: 4;
+    }
+}  */
+.sectionBtnAbout {
+    /* height: 100vh;
+    position: sticky;
+    top: 40%; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.divBtnAbout {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    align-items: center;
+    /* padding: 4% 10%; */
+    background-color: #000000;
+    cursor: pointer;
+    gap: 25px;
+    z-index: 9999;
+    position: relative;
+
 }
 
 
+.btnAbout{
+
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-family: var(--secondaryfont);
+    letter-spacing: 2px;
+    font-size: 6rem;
+    justify-content: start;
+    margin: 6% 0%;
+    cursor: pointer;
+}
+
+.divBtnAbout .spanHover {
+    font-family: var(--decofont);
+    font-size: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+.divBtnAbout:hover .spanHover {
+
+    animation: reveal 1s forwards;
+}
 

@@ -2,11 +2,17 @@
 import { useEffect, useState } from "react";
 import Lenis from 'lenis'
 import Image from "next/image";
+import SvgFleche from "./assets/svgfleche.svg"
 import Mathtexture from "./assets/mathtexture.jpg"
+import MathBg from "./assets/mathbg.svg"
 import Arrow from "./assets/Arrow.svg"
 import NavBar from "./components/NavBar";
 import styles from "./page.module.css";
 import SecondSection from "./components/SecondSection";
+import SvgAnimation from "./components/SvgAnimation";
+
+import Contact from "./components/Contact";
+import ThirdSection from "./components/ThirdSection";
 
 
 
@@ -33,12 +39,18 @@ export default function Home() {
   return (
     <>
     <section className={styles.container}>
+      <div className={styles.videoBackground}>
+        <video autoPlay width="100%" height="auto" loop muted>
+        <source src="/smoke.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de vidéos
+      </video>
+    </div>
       <div className={styles.sectioncontent}>
         <div className={styles.header}>
           <NavBar />
         </div>
         <div className={styles.mainpage}>
-          <Image src={Arrow} alt="flèche" height={300} />
+          <Image src={Arrow} alt="flèche" height={450} />
           <div className={styles.title} onMouseMove={handleMouseMove}>
             <div className={styles.animhover} >
               <h1 className={styles.cyberviking}>CYBERVIKING</h1>
@@ -61,29 +73,45 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.footermain}>
-          <div className={styles.imagefootermain}>
-            <div className={styles.imagetext}>
-         
-            <h2>BOOK.</h2>
+                <div className={styles.imagefootermain}>
+          <div className={styles.imagetext}>
+            <div className={styles.videoContainer}>
+              <video autoPlay loop muted className={styles.videoMath}>
+                <source src="/IMG_1042.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos
+              </video>
             </div>
-            <div className={styles.imagespan}>
-            <p>/</p>
-            </div>
-            <div className={styles.imagetext}>
-            <h2>GALERIE.</h2>
-            </div> 
+            <Image src={MathBg} alt="" />
           </div>
-          <h2>SCROLL</h2>
+        </div>
+
+          <div className={styles.middleFooter}>
+            <Image src={SvgFleche} alt="svg fleche scroll down" />
+          </div>
+          
           <div className={styles.texticone}>
-            <p>Tattoo artist basé à Glomel</p>
+            <p>ARTISTE <span>O</span> FRANCAIS, <br />BASE A GLOMEL</p>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <SecondSection Mathtexture={Mathtexture} />
+    <div className={styles.svgposition}>
+            <SvgAnimation  />
+            <SvgAnimation  />
+            </div>
+    
+    <section >
+      <SecondSection  />
+      <section className={styles.issou}>
+        <ThirdSection />
+      </section>
+        <div style={{height: '100vh'}}></div>
     </section>
-
+        <section>
+      <section className={styles.contact}>
+      <Contact />
+      </section>
+    </section>
     </>
   );
 }

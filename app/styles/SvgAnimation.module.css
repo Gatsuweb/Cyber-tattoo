@@ -1,4 +1,5 @@
 .svgContainer {
     display: flex;
     justify-content: center;
+    opacity: 0.5;
   }

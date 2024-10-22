@@ -12,7 +12,7 @@ const ThirdSection = () => {
 
     const { x, y } = useMousePosition();
   
-    const size = isHovered ? 300 : 40;
+    const size = isHovered ? 400 : 40;
     
   return (
     <>
@@ -21,9 +21,9 @@ const ThirdSection = () => {
             animate={{
                 WebkitMaskPosition: `${x - (size/2)}px ${y - (size/2)}px`, WebkitMaskSize: `${size}px`,}}
             transition={{ type: "tween", ease: "backOut", duration:0.5}} >
-            <h2 onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>Le voyage commence <span>aujourd'hui</span>.</h2>
+            <h2 onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>Le voyage commence <span>aujourd&apos;hui</span>.</h2>
             <h2 onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>La <span>force</span> du Nord.</h2>
-            <h2 onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>L'<span>esprit</span> du loup.</h2>
+            <h2 onMouseEnter={() => {setIsHovered(true)}} onMouseLeave={() => {setIsHovered(false)}}>L&apos;<span>esprit</span> du loup.</h2>
             </motion.div>
         <div className={styles.body}>
             <div className={styles.numeroun}>
@@ -40,6 +40,7 @@ const ThirdSection = () => {
                 <Image src={ImgViking} alt='image 1' width={180} height={100} />
             </div>
         </div>
+        
     </div>  
 
         {/* <div className={styles.vikingcontent}>
