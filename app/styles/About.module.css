@@ -1,0 +1,201 @@
+.bgContainer {
+    background-image: url("../assets/BGTRANSAPRENT.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.proposContainer {
+
+    padding-left: var(--margin-horizontal);
+    padding-right: var(--margin-horizontal);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.imgTest, .imgTestDeux {
+    position: sticky;
+    top: 30%;
+    padding-left: 15%;
+}
+
+.imgTest img {
+    rotate: 15deg;
+}
+.imgTestDeux img {
+    rotate: -15deg;
+}
+
+.proposContent {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-transform: uppercase;
+    
+}
+.firstParagraph {
+    opacity: 0.8;
+    position: sticky;
+    top: 40%;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    text-transform: uppercase;
+    font-size: clamp(0.6rem, 0.4885rem + 0.5096vw, 1.1rem);
+}
+
+.proposTitle {
+    align-items: end;
+    display: flex;
+    width: 40vw;
+}
+
+.paragraphAbout {
+    font-family: var(--thirdfont);
+
+    position: sticky;
+    top: 0;
+    margin-top: 15%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+    padding: 15% 18%;
+    justify-content: center;
+    align-items: center;
+    animation: animpabout forwards;
+    animation-timeline: view();
+    animation-range-start: 300px ;
+    animation-range-end: 1000px;
+    line-height: 1.5;
+    font-size: clamp(1rem, 0.8885rem + 0.5096vw, 1.5rem);}
+
+.paragraphAbout p {
+    text-align: justify;
+}
+
+.paragraphAbout h2 {
+    font-family: var(--secondaryfont);
+    font-weight: 100;
+    font-size: 7rem;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+}
+.subParagraphAbout {
+    display: flex;
+        gap: 50px;
+        font-size: clamp(0.8rem, 0.7331rem + 0.3057vw, 1.1rem);        color: white;
+        font-family: var(--thirdfont);
+}
+
+#imgProposBas {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    animation: animpabout forwards;
+    animation-timeline: view();
+    animation-range-start: 300px ;
+    animation-range-end: 1500px;
+}
+
+
+@keyframes animpabout {
+    from {
+        rotate: 10deg;
+        scale: 0;
+        opacity: 0;
+    }
+    to {
+        rotate: 0;
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.proposParallax {
+    position: sticky;
+    top: 0;
+}
+
+.imgProposDeux {
+    position: sticky;
+    top: -100%;
+    height: 100vh;
+    padding: 0 10%;
+    animation: animpabout;
+    animation-timeline: view();
+    animation-range-end: 1400px;
+}
+
+.imgProposTrois {
+    padding: 0 10%;
+    position: sticky;
+    top: -100%;
+    height: 100vh;
+ display: flex;
+ justify-content: end;
+ animation: animpabout;
+ animation-timeline: view();
+ animation-range-end: 1400px;
+}
+
+.lastSectionPropos {
+    padding-left: var(--margin-horizontal);
+    padding-right: var(--margin-horizontal);
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    height: 100vh;
+    background-color: black;
+}
+.lastSectionPropos p {
+
+    text-align: justify;
+    line-height: 1.5;
+    font-size: clamp(1rem, 0.8885rem + 0.5096vw, 1.5rem);
+
+}
+
+.pPlusc {
+    position: relative;
+    width: 30%;
+}
+
+.carreAnim {
+    top: -60%;
+    left: -6%;
+    opacity: 0.3;
+    position: absolute;
+    height: 600px;
+    border: 2px solid white;
+    aspect-ratio: 1;
+    animation: rotatecarre;
+    animation-timeline: view();
+}
+
+@keyframes rotatecarre {
+    to {
+        rotate: -25deg;
+    }
+}
+
+.carreAnim:nth-child(2) {
+    rotate: 5deg;
+    animation: rotatecarres;
+    animation-timeline: view();
+}
+
+@keyframes rotatecarres{
+    to {
+        rotate: 25deg;
+    }
+}

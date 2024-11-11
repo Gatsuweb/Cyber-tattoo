@@ -19,11 +19,32 @@ const NavBar = () => {
          <Image src={Logo} alt="Logo author" height={80} width={80}/>
          <p>©2024</p>
          </div>
-         <div className={isOpen ? styles.close : styles.menu} onClick={toggleMenu}>
-                    <span>CLOSE</span>
-                    <span>MENU</span>
-      </div>
+        {isOpen ? (
+          <div className={styles.close} onClick={toggleMenu}>
+            <span>CLOSE</span>
+          </div>
+        ): (
+          <div className={styles.menu} onClick={toggleMenu}>
+            <span>MENU</span>
+          </div>
+        )}
     </div>
+    {isOpen ? (
+  <div className={`${styles.modalNav} ${styles.navOpen}`}>
+    <li><a href="/">Accueil</a></li>
+    <li><a href="/about">About</a></li>
+    <li>
+      <a href="/galerie">Galerie</a></li>
+    <li><a href="/faq">Faq</a></li>
+  </div>
+) : (
+  <div className={`${styles.modalNav} ${styles.navClose}`}>
+    <li>Accueil</li>
+    <li>About</li>
+    <li>Galerie</li>
+    <li>Faq</li>
+  </div>
+)}
 
     </>
   )

@@ -14,6 +14,13 @@
   height: 1200px;
   z-index: -2;
   overflow: hidden;
+  opacity: 0.5;
+}
+
+.videoBackground video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit le conteneur tout en gardant les proportions */
 }
 
 .sectioncontent {
@@ -39,18 +46,22 @@
   width: 100%;
   z-index: -1;
 }
-
 .subtitle {
   display: flex;
   justify-content: space-between;
+  animation: startanim 1s forwards;
+
 }
 
 .subtitle span {
-  font-size: clamp(4rem, 1.2308rem + 12.3077vw, 16rem);
+  font-size: clamp(2rem, 1.2308rem + 12.3077vw, 16rem);
   font-family: var(--secondaryfont);
   margin-top: -10%;
   color: transparent; /* Texte transparent */
   -webkit-text-stroke: 2px white; /* Contour blanc */
+  animation: startanim 1s forwards;
+  animation-delay: 1.4s;
+
 }
 .reso {
   padding-top: 5%;
@@ -64,7 +75,7 @@
 
 .reso p {
   border-left: 1px solid white;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 0.7108rem + 0.4076vw, 1.2rem);
 }
 
 .footermain {
@@ -80,6 +91,10 @@
 
 }
 
+.arrowImg
+ {
+  height: 400px;
+ }
 .hoverImage{
   position: absolute;
   width: 15vw; /* Par exemple */
@@ -93,10 +108,12 @@
 .animhover{
   cursor: none;
   margin-top: 10%;
+  overflow: hidden;
 }
 .animhover:hover .hoverImage {
   opacity: 0.8;
 }
+
 
 .imagetext{
   display: flex;
@@ -147,6 +164,7 @@
 
 .texticone p{
   animation: startanim 1s ease forwards;
+  animation-delay: 1.8s;
   transform: translateY(100%);
 }
 
@@ -181,8 +199,92 @@
 } */
 
 
-@media  screen and (max-width: 1280) {
+@media  screen and (max-width: 1280px) {
   .hoverImage {
+    display: none;
+  }
+
+  .arrowImg {
+    height: 300px;
+  }
+  .videoContainer {
+    width: 130px;
+    height: 180px;
+  }
+
+  .videoMath {
+    width: 130px;
+    height: 180px;
+    object-fit: cover;
+  }
+  .imagetext img {
+    width: 130px;
+    height: 180px;
+  }
+}
+
+@media  screen and (max-width: 900px) {
+  .hoverImage {
+    display: none;
+  }
+
+  .arrowImg {
+    height: 300px;
+  }
+
+  .videoContainer {
+    width: 110px;
+    height: 160px;
+  }
+
+  .imagetext {
+    gap: 40px;
+  }
+  .videoMath {
+    width: 110px;
+    height: 160px;
+    object-fit: cover;
+  }
+  .imagetext img {
+    width: 110px;
+    height: 160px;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  .hoverImage {
+    display: none;
+  }
+
+  .issou {
+    display: none;
+  }
+
+  .issouDiv{
+    display: none;
+  }
+
+  .arrowImg {
+    height: 300px;
+  }
+  .videoContainer {
+    width: 70px;
+    height: 100px;
+  }
+  .imagetext {
+    gap: 20px;
+  }
+  .videoMath {
+    width: 70px;
+     height: 100px;
+    object-fit: cover;
+  }
+  .imagetext img {
+    width: 70px;
+     height: 100px;
+
+  }
+  .middleFooter {
     display: none;
   }
 }

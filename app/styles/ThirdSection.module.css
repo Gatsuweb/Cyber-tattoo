@@ -10,17 +10,19 @@
     height: 100vh;
 
 }
-
 @keyframes appear {
     from {
+        rotate: 10deg;
+        scale: 0;
         opacity: 0;
-        scale: 0.5;
     }
     to {
-        opacity: 1;
+        rotate: 0;
         scale: 1;
+        opacity: 1;
     }
 }
+
 
 .vikingcontent img {
     object-fit: cover;
@@ -34,7 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 6.5rem;
+    font-size: clamp(2rem, 0.9968rem + 4.586vw, 6.5rem);
 }
 
 .mask {
@@ -65,8 +67,17 @@
     text-align: end;
 }
 
-.numeroun, .numerodeux, .numerotrois {
+.numeroun, .numerotrois {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.numerodeux {
+    text-align: end;
+}
+
+.thirdSectionImg{
+  display: flex;
+  justify-content: center;
+  width: 35%;
 }
