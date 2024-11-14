@@ -50,7 +50,7 @@ export default function Home() {
           <NavBar />
         </div>
         <div className={styles.mainpage}>
-          <Image src={Arrow} alt="flèche" height={450} />
+          <Image src={Arrow} alt="flèche" height={400} />
           <div className={styles.title} onMouseMove={handleMouseMove}>
             <div className={styles.animhover} >
               <h1 className={styles.cyberviking}>CYBERVIKING</h1>
