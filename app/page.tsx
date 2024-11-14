@@ -50,7 +50,7 @@ export default function Home() {
           <NavBar />
         </div>
         <div className={styles.mainpage}>
-          <Image src={Arrow} alt="flèche" height={400} />
+          <Image src={Arrow} alt="flèche" className={styles.arrowImg}/>
           <div className={styles.title} onMouseMove={handleMouseMove}>
             <div className={styles.animhover} >
               <h1 className={styles.cyberviking}>CYBERVIKING</h1>
@@ -81,12 +81,12 @@ export default function Home() {
                 Votre navigateur ne supporte pas la lecture de vidéos
               </video>
             </div>
-            <Image src={MathBg} alt="" />
+            <Image src={MathBg} alt="" className={styles.mathimg}/>
           </div>
         </div>
 
           <div className={styles.middleFooter}>
-            <Image src={SvgFleche} alt="svg fleche scroll down" />
+            <Image src={SvgFleche} alt="svg fleche scroll down" className={styles.svgarrow}/>
           </div>
           
           <div className={styles.texticone}>
@@ -95,22 +95,20 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <div className={styles.svgposition}>
+    {/* <div className={styles.svgposition}>
             <SvgAnimation  />
             <SvgAnimation  />
-            </div>
+            </div> */}
     
     <section >
       <SecondSection  />
       <section className={styles.issou}>
         <ThirdSection />
       </section>
-        <div style={{height: '100vh'}}></div>
+        <div style={{height: '100vh'}} className={styles.issouDiv}></div>
     </section>
         <section>
-      <section className={styles.contact}>
-      <Contact />
-      </section>
+  
     </section>
     </>
   );

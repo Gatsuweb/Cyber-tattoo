@@ -1,0 +1,122 @@
+.faqContainer {
+    padding-left: var(--margin-horizontal);
+    padding-right: var(--margin-horizontal);
+    color: white;
+    
+}
+
+.faqContent {
+    list-style: none;
+    font-family: var(--thirdbold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.faqContent h2 {
+    font-family: var(--secondaryfont);
+    font-size: 8rem;
+    color: transparent;
+    font-weight: 100;
+    -webkit-text-stroke: 1px white;
+}
+
+.beforeRdv, .duringRdv, .paiementRdv, .afterRdv {
+    overflow: hidden;
+    padding: 0 15%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    gap: 6rem;
+    border-bottom: 1px solid white;
+ 
+
+    background-color: black;
+
+}
+
+.faqContent section:nth-child(even) {
+    animation: fadeleft;
+    animation-timeline: view();
+    animation-range-end: 900px;
+}
+
+.faqContent section:nth-child(odd) {
+    animation: faderight;
+    animation-timeline: view();
+    animation-range-end: 900px;
+}
+
+
+@keyframes fadeleft {
+    from {
+        opacity: 0;
+        scale: 0;
+        transform: translateX(-50%)
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes faderight {
+    from {
+        opacity: 0;
+        scale: 0;
+        transform: translateX(50%)
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+.beforeRdv h3, .duringRdv h3, .paiementRdv h3, .afterRdv h3{
+text-transform: uppercase;
+}
+
+.beforeRdv ul, .duringRdv ul, .paiementRdv ul, .afterRdv ul {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.beforeRdv ul li, .duringRdv ul li, .paiementRdv ul li , .afterRdv ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.beforeRdv li p, .duringRdv li p, .paiementRdv li p, .afterRdv li p {
+    font-size: clamp(0.8rem, 0.6439rem + 0.7134vw, 1.5rem);    font-family: var(--thirdbold);
+    
+}
+
+.spanQuestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+
+}
+
+
+.spanQuestion span {
+    font-size: clamp(2rem, 1.3312rem + 3.0573vw, 5rem);
+    font-family: var(--fonttitle);
+    line-height: 1;
+}
+
+.widthDiv {
+    width: 130px;
+    border-right: 3px solid white;
+    margin-right: 5%;
+}

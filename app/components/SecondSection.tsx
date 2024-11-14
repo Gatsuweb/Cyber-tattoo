@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import SplineComponent from './SplineComponent';
-import ThirdSection from './ThirdSection';
 import ParallaxImage from './ParallaxImage';
 import Word from './Word';
 import Runes from "./Runes";
@@ -16,7 +15,6 @@ import Image7 from "../assets/minigalerie/papillon.png"
 import Image8 from "../assets/minigalerie/main2.png"
 import Image9 from "../assets/minigalerie/tigre.png"
 import styles from "../styles/SecondSection.module.css"
-import AnimatedSvg from './AnimatedSvg';
 
 
 const SecondSection = () => {
@@ -105,7 +103,7 @@ const SecondSection = () => {
                             <Image src={Image4} alt="" className={styles.photoarigato} />
                             </div>
                         </div>
-            <div style={{height: '100vh'}}></div>
+            <div style={{height: '100vh'}} className={styles.animPhotoDiv}></div>
         <section className={styles.deuxiemeparagraph}>
                 <Word value={otherparagraph} title={othertitle}/>
         </section>

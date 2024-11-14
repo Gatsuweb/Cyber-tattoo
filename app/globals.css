@@ -45,11 +45,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+}
+
 
 h1 {
   font-family: var(--fonttitle);
   font-weight: 100;
-  font-size: clamp(3rem, 4.2166rem + 8.1529vw, 14rem);
+  font-size: clamp(3rem, 0.5478rem + 11.2102vw, 14rem);
   background: linear-gradient(to right, 
   rgb(66, 0, 0),
   rgb(78, 0, 0) 40%,
@@ -74,41 +78,64 @@ h1 {
   }
 }
 
+
 p {
-  font-size: clamp(1rem, 0.9108rem + 0.4076vw, 1.4rem);
-  font-family: "Rosehot";
+  font-size: clamp(0.8rem, 0.6662rem + 0.6115vw, 1.4rem);
+  font-family: var(--thirdbold);
   color: white;
 }
+
 
 ul {
   font-family: var(--thirdbold);
 }
 
 
-@media  screen and (max-width: 1600) {
+/* @media  screen and (max-width: 1600px) {
   img {
     width: 80%;
   }
+} */
+
+@media  screen and (max-width: 1280px) {
+  img {
+    height: 70%;
+  }
+}
+@media  screen and (max-width: 1000px) {
+  img {
+    height: 50%;
+  }
 }
 
-@media  screen and (max-width: 1280) {
+@media  screen and (max-width: 600px) {
   img {
-    width: 70%;
+    height: 40%;
   }
 }
-@media  screen and (max-width: 1000) {
+@media  screen and (max-width: 480px) {
   img {
-    width: 50%;
+    height: 25%;
   }
 }
 
-@media  screen and (max-width: 600) {
-  img {
-    width: 40%;
-  }
+html.lenis, html.lenis body {
+  height: auto;
 }
-@media  screen and (max-width: 480) {
-  img {
-    width: 25%;
-  }
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+

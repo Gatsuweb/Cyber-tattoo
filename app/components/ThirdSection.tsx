@@ -28,16 +28,22 @@ const ThirdSection = () => {
         <div className={styles.body}>
             <div className={styles.numeroun}>
                 <h2 >ᛚᛖ ᚹᛟᛃᚨᚷᛖ ᚲᛟᛗᛗᛖᚾ<br />ᚲᛖ  ᚨᚢᛅᛏᛟᚱᛞᚢᛁ.</h2>
-                <Image src={ImgViking} alt='image 1' width={180} height={100} />
+                {/* <div className={styles.thirdSectionImg}>
+                <Image src={ImgViking} alt='image 1' width={250} height={140} />
+                </div> */}
             </div>
 
             <div className={styles.numerodeux}>
-                <Image src={ImgViking} alt='image 1' width={180} height={100} />
+                   {/* <div className={styles.thirdSectionImg}>
+                <Image src={ImgViking} alt='image 1' width={250} height={140} />
+                </div> */}
                 <h2>ᛚᚨ ᚠᛟᚱᚲᛖ ᛞᚢ ᚾᛟᚱᛞ.</h2>
             </div>
             <div className={styles.numerotrois}>
                 <h2>ᛚᛖᛊᛈᚱᛁᛏ ᛞᚢ ᛚᛟᚢᛞ.</h2>
-                <Image src={ImgViking} alt='image 1' width={180} height={100} />
+                   {/* <div className={styles.thirdSectionImg}>
+                <Image src={ImgViking} alt='image 1' width={250} height={140} />
+                </div> */}
             </div>
         </div>
         

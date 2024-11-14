@@ -13,7 +13,7 @@
     justify-content: space-around;
     flex-direction: column;
     list-style: none;
-    font-size: 8rem;
+    font-size: clamp(2rem, 0.6624rem + 6.1146vw, 8rem);
     font-family: "Metal";
 }
 
@@ -29,7 +29,42 @@
     }
 }
 
-.contactContainer ul li:nth-child(2) {
+/* .contactContainer ul li:nth-child(2) {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
+} */
+
+
+@media  screen and (max-width: 1280px) {
+
+    .contactContainer ul {
+        height: 80vh;
+
+  }
 }
+  
+  @media  screen and (max-width: 900px) {
+    .contactContainer ul {
+        height: 60vh;
+
+  }
+
+  }
+  
+  @media  screen and (max-width: 480px) {
+    .contactContainer {
+        height: 50vh;
+    }
+    .contactContainer ul {
+        align-items: center;
+
+  }
+  .contactContainer ul li {
+   text-align: center;
+    border-bottom: 1px solid white;
+  }
+  .contactContainer ul li:nth-child(2) {
+    border-bottom: 1px solid white;
+    border-top: 0px solid white;
+}
+  }

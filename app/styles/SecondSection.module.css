@@ -20,6 +20,7 @@
     animation: appear linear;
     animation-timeline: view();
     animation-range-end: 800px;
+
 }
 
 .getout {
@@ -28,6 +29,9 @@
     width: 50vw;
     display: flex;
     justify-content: space-between;
+    animation: appear;
+    animation-timeline: view();
+    animation-range-end: 1100px;
 }
 
 .getout span{
@@ -36,7 +40,7 @@
 
 .artist {
     margin-top: 4%;
-    font-size: 5rem;
+    font-size: clamp(2rem, 1.3312rem + 3.0573vw, 5rem);
     text-transform: uppercase;
     font-family: var(--secondaryfont);
     color: transparent;
@@ -44,16 +48,19 @@
 
 }
 
-@keyframes appear {
+@keyframes appear{
     from {
+        rotate: 10deg;
+        scale: 0;
         opacity: 0;
-        scale: 0.5;
     }
     to {
-        opacity: 1;
+        rotate: 0;
         scale: 1;
+        opacity: 1;
     }
 }
+
 
 
 .splinecrane {
@@ -67,17 +74,25 @@
 }
 
 .runes {
-    background-color: #000000;
+    opacity: 1;
+    scale: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    animation: appear;
+    animation: ss;
+    animation-timeline: view();
+    animation-range-start: 200px;
 
 }
 
+@keyframes ss {
+    to {
+        opacity: 0;
+    }
+}
 
 
 .littleaboutcontainer section:last-child {
@@ -119,7 +134,7 @@
     -webkit-text-stroke: 2px white;
     font-family: var(--secondaryfont);
     letter-spacing: 2px;
-    font-size: 6rem;
+font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
     justify-content: start;
     margin: 6% 0%;
     cursor: pointer;
@@ -144,7 +159,7 @@
         font-size: 0;
     }
     to {
-        font-size: 5rem;
+        font-size: clamp(2rem, 1.3312rem + 3.0573vw, 5rem);
     }
 }
 
@@ -199,6 +214,9 @@
     position: sticky;
     top: 0;
     background-color: #000000;
+    animation: appear;
+    animation-timeline: view();
+    animation-range-end: 1100px;
 }
 
 .deuxiemeparagraph p {
@@ -228,6 +246,8 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    position: sticky;
+    top: 40vh;
 }
 .divBtnAbout {
     width: 40vw;
@@ -253,7 +273,7 @@
     -webkit-text-stroke: 2px white;
     font-family: var(--secondaryfont);
     letter-spacing: 2px;
-    font-size: 6rem;
+font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
     justify-content: start;
     margin: 6% 0%;
     cursor: pointer;
@@ -271,3 +291,76 @@
     animation: reveal 1s forwards;
 }
 
+
+@media  screen and (max-width: 1280px) {
+
+    .animphoto {
+        margin-top: -22%;
+    }
+    .photoarigato {
+        height:110px;
+        width:120px;
+    }
+  }
+
+  
+  @media  screen and (max-width: 900px) {
+
+    .animphoto {
+        margin-top: -24%;
+    }
+    .photoarigato {
+        height:80px;
+        width:80px;
+    }
+  }
+  
+  @media  screen and (max-width: 900px) {
+    .testdefou {
+        column-count: 3;
+        object-fit: cover;
+        width: 100vw;
+    
+        z-index: 3;
+    }
+    .splinecrane {
+        display: none;
+    }
+    .animphoto {
+        display: none;
+    }
+.getout {
+    width: 100vw;
+}
+    .animPhotoDiv {
+        height: 30vh;
+    }
+
+    .divbtngalerie {
+        width: 100%;
+        justify-content: center;
+        z-index: 3;
+    }
+    .divbtngalerie .spanHover{
+        display: none;
+    }
+    .divBtnAbout .spanHover{
+        display: none;
+    }
+    .littleaboutcontainer section:nth-child(1) {
+        text-align: center;
+        height: 50vh;
+    }
+
+    .deuxiemeparagraph p {
+        width: 100%;
+    }
+
+    .deuxiemeparagraph {
+        text-align: center;
+    }
+    .sectionBtnAbout {
+        justify-content: center;
+    }
+ 
+  }
