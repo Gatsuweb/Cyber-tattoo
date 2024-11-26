@@ -1,5 +1,6 @@
 .paragraph {
-    font-family: var(--primaryfont);
+    font-family: var( --thirdbold);
+    font-weight: 100;
     width: 50%;
 font-size: clamp(0.0625rem, -0.5924rem + 2.9936vw, 3rem);
     margin-left: var(--margin-horizontal);
@@ -7,6 +8,9 @@ font-size: clamp(0.0625rem, -0.5924rem + 2.9936vw, 3rem);
     display: flex;
     flex-wrap: wrap;
     
+}
+.titlescroll {
+  padding-left: var(--margin-horizontal);
 }
 
  .word{

@@ -1,7 +1,6 @@
 .littleaboutcontainer {
     color: white;
     position: relative;
-
     /* overflow-x: hidden; */
  
 }
@@ -12,6 +11,7 @@
     margin-top: 10%;
      padding-left: var(--margin-horizontal);
      padding-right: var(--margin-horizontal);
+   ;
 
 }
 
@@ -67,9 +67,10 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: -200px;
-    z-index: -1;
+    top:-200px;
+    z-index: 1;
     overflow: hidden;
+    opacity: 0.9;
 
 }
 
@@ -108,6 +109,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: end;
+
 }
 .testdefou {
     column-count: 3;
@@ -116,6 +118,8 @@
 }
 
 .divbtngalerie {
+    position: relative;
+    z-index: 2;
     width: 40vw;
     display: flex;
     justify-content: center;
@@ -125,7 +129,12 @@
     background-color: #000000;
     cursor: pointer;
     gap: 25px;
-}  
+}
+.divbtngalerie a {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-decoration: none;
+}
 
 .btnGalerie {
     border: none;
@@ -217,6 +226,7 @@ font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
     animation: appear;
     animation-timeline: view();
     animation-range-end: 1100px;
+    z-index: 2;
 }
 
 .deuxiemeparagraph p {
@@ -226,6 +236,7 @@ font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
 .parallaxContainer {
 
     height: 100vh;
+
 
     
 }
@@ -247,6 +258,7 @@ font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
     justify-content: end;
     align-items: center;
     position: sticky;
+    z-index: 2;
     top: 40vh;
 }
 .divBtnAbout {
@@ -262,6 +274,12 @@ font-size: clamp(1.4rem, 0.3745rem + 4.6879vw, 6rem);
     z-index: 9999;
     position: relative;
 
+}
+
+.divBtnAbout a {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-decoration: none;
 }
 
 

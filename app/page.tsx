@@ -68,20 +68,21 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.reso}>
-            <p>instagram</p>
-            <p>mail</p>
+            <p><a href="https://www.instagram.com/cybervikingtattoo/">instagram</a></p>
+            <p><a href="mailto:cyberpunkvikingtattoo@hotmail.fr">mail</a></p>
           </div>
         </div>
         <div className={styles.footermain}>
                 <div className={styles.imagefootermain}>
           <div className={styles.imagetext}>
-            <div className={styles.videoContainer}>
+            {/* <div className={styles.videoContainer}>
               <video autoPlay loop muted className={styles.videoMath}>
                 <source src="/IMG_1042.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture de vidéos
               </video>
-            </div>
+            </div> */}
             <Image src={MathBg} alt="" className={styles.mathimg}/>
+            <span className={styles.galerieHoverImg}>GALERIE</span>
           </div>
         </div>
 

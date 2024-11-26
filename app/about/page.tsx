@@ -2,9 +2,12 @@
 import Image from "next/image"
 import Tigre from "../assets/minigalerie/tigre.png"
 import MathTexture from "../assets/imagea.svg"
+import MathTextures from "../assets/mathtexture.jpg"
+import Viki from "../assets/viki.svg"
+import MathTextured from "../assets/mathtextured.jpg"
 import styles from "../styles/About.module.css"
 import NavBar from "../components/NavBar"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Lenis from "lenis"
 import { section } from "framer-motion/client"
 
@@ -22,6 +25,11 @@ export default function About() {
         requestAnimationFrame(raf)
       
       }, [])
+      const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0 })
+
+      const handleMouseMove = (e) => {
+        setCursorPosition({ x: e.clientX, y: e.clientY });
+      };
   return (
     <section className={styles.bgContainer}>
     <section className={styles.proposContainer}>
@@ -39,21 +47,39 @@ export default function About() {
         </div>
         <div style={{height: "100vh"}}></div>
         <div className={styles.imgTest}>
-            <Image src={MathTexture} alt="" height={350}/>
+            <Image src={MathTextures} alt="" height={350}/>
         </div>
         <div style={{height: "100vh"}}></div>
         <div className={styles.imgTestDeux}>
-            <Image src={MathTexture} alt="" height={350}/>
+            <Image src={MathTextured} alt="" height={350}/>
         </div>
     <div style={{height: "100vh"}}></div>
     </section>
-        <section className={styles.paragraphAbout}>
-            <h2>A Propos de moi</h2>
-                    <p>Mon style, inspiré par l’univers des Vikings et leurs symboles, plonge profondément dans les mystères des runes, les récits héroïques et l’esthétique sauvage du Nord. Les tatouages que je crée ne se limitent pas à être de simples motifs ; ils sont des pièces d’art qui racontent des histoires, symbolisent des valeurs comme le courage, la force, et l’authenticité. En m'inspirant de l’art viking, je réalise des designs qui vont de symboles anciens tels que les runes et les boucliers, à des compositions modernes et puissantes, intégrant parfois des touches de style cyberpunk pour donner une dimension futuriste et unique à chaque œuvre.</p> 
+    <section 
+  className={styles.paragraphAbout}
+  onMouseMove={handleMouseMove}
+
+>
+    <div className={styles.animCursorHover}>
+            <h2 >A Propos de moi</h2>
+                    <p >Mon style, inspiré par l’univers des Vikings et leurs symboles, plonge profondément dans les mystères des runes, les récits héroïques et l’esthétique sauvage du Nord. Les tatouages que je crée ne se limitent pas à être de simples motifs ; ils sont des pièces d’art qui racontent des histoires, symbolisent des valeurs comme le courage, la force, et l’authenticité. En m'inspirant de l’art viking, je réalise des designs qui vont de symboles anciens tels que les runes et les boucliers, à des compositions modernes et puissantes, intégrant parfois des touches de style cyberpunk pour donner une dimension futuriste et unique à chaque œuvre.</p> 
                 <div className={styles.subParagraphAbout}>
                     <span>Ma passion pour la musique métal se reflète également dans mon travail. Le métal, avec son énergie brute et ses thèmes profonds, partage avec les Vikings une philosophie d'intensité et de liberté. Que ce soit par des détails sombres et audacieux ou des lignes fluides et dynamiques, mon approche vise à capturer l'esprit rebelle et indomptable qui anime à la fois le métal et la culture viking.</span>
                     <span>L'expérience CybervikingTattoo, c'est avant tout une collaboration. Mon objectif est de comprendre ce qui résonne en vous pour donner vie à un tatouage unique, qui vous parle et vous représente. Que vous soyez ici pour un symbole discret, une manchette complète, ou une pièce imposante dans le dos, mon but est de transformer chaque idée en une œuvre personnelle et intemporelle.</span>
                 </div>
+
+    <Image 
+      src={Viki} 
+      alt="image viking hover" 
+      className={styles.imgHoverVik}
+      style={{
+        top: `${cursorPosition.y}px`,
+        left: `${cursorPosition.x}px`,
+        transform: 'translate(-50%, -50%)',
+      }}
+    />
+    </div>
+
                     <div style={{height: "100vh"}}></div>
             </section>
             <section className={styles.proposParallax}>

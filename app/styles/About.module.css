@@ -12,7 +12,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
 }
 
 .imgTest, .imgTestDeux {
@@ -35,8 +34,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     text-transform: uppercase;
+
     
 }
 .firstParagraph {
@@ -57,17 +56,13 @@
 }
 
 .paragraphAbout {
-    font-family: var(--thirdfont);
+    overflow: hidden;
 
     position: sticky;
     top: 0;
-    margin-top: 15%;
     opacity: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    height: 100vh;
-    padding: 15% 18%;
+    height: 200vh;
+    padding: 5% 18%;
     justify-content: center;
     align-items: center;
     animation: animpabout forwards;
@@ -75,10 +70,11 @@
     animation-range-start: 300px ;
     animation-range-end: 1000px;
     line-height: 1.5;
-    font-size: clamp(1rem, 0.8885rem + 0.5096vw, 1.5rem);}
+}
 
 .paragraphAbout p {
     text-align: justify;
+    cursor: none;
 }
 
 .paragraphAbout h2 {
@@ -88,10 +84,38 @@
     color: transparent;
     -webkit-text-stroke: 1px white;
 }
+.animCursorHover {
+    font-size: clamp(1.1rem, 0.9385rem + 0.7179vw, 1.8rem);
+    font-family: var(--thirdfont);
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.imgHoverVik {
+    position: absolute;
+    width: 35vw; /* Par exemple */
+  /* Ajuste la taille de l'image */
+    height: auto;
+
+    pointer-events: none; /* Permet d'interagir avec d'autres éléments sous l'image */
+    opacity: 0; /* Masque l'image par défaut */
+    transition: opacity 0.3s ease;
+    cursor: none;
+}
+
+.animCursorHover:hover .imgHoverVik {
+    opacity: 0.9;
+
+  }
+  
+
 .subParagraphAbout {
     display: flex;
         gap: 50px;
-        font-size: clamp(0.8rem, 0.7331rem + 0.3057vw, 1.1rem);        color: white;
+        font-size: clamp(0.9rem, 0.8077rem + 0.4103vw, 1.3rem);       
+        color: white;
         font-family: var(--thirdfont);
 }
 

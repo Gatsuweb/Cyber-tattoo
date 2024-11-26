@@ -50,6 +50,7 @@ body {
 }
 
 
+
 h1 {
   font-family: var(--fonttitle);
   font-weight: 100;
@@ -84,12 +85,24 @@ p {
   font-family: var(--thirdbold);
   color: white;
 }
+h3 {
+  font-size: clamp(4rem, 2.6154rem + 6.1538vw, 10rem);
+  font-family: var(--secondaryfont);
+  color: transparent;
+  font-weight: 100;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+}
 
 
 ul {
   font-family: var(--thirdbold);
 }
 
+footer {
+  position: relative;
+  z-index: 2;
+}
 
 /* @media  screen and (max-width: 1600px) {
   img {

@@ -23,7 +23,7 @@ export default function ScrollText({value, title}: ScrollTextProps) {
     const words = value.split(" ");
   return (
     <>
-        <h1>{title}</h1>
+        <h3 className={styles.titlescroll}>{title}</h3>
         <p 
             className={styles.paragraph}
             ref={element} >

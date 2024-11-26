@@ -20,8 +20,8 @@ import styles from "../styles/SecondSection.module.css"
 const SecondSection = () => {
     const title = "Le studio"
     const othertitle = "L'artiste"
-    const paragraph = "Tatoueur Français. Je transmets ma passion pour la mythologie vikings et le metal sous forme d'art sur votre corps. Tatoueur Français. Je transmets ma passion pour la mythologie vikings et le metal sous forme d'art sur votre corps."
-    const otherparagraph = "Je m'appelle Mathias. Je tattoo depuis X années. Je m'appelle Mathias. Je tattoo depuis X années.Je m'appelle Mathias."
+    const paragraph = "Tatoueur Français. Je transmets ma passion pour la mythologie vikings et le metal sous forme d'art sur votre corps. Chaque dessin est une pièce unique, inspirée par l'histoire des guerriers nordiques, leurs runes, et leur riche culture."
+    const otherparagraph = "En tant qu'artiste, je mets mon savoir-faire au service de votre peau pour créer des œuvres qui reflètent votre personnalité et votre histoire. Que vous soyez amateur de motifs vikings, de symboles puissants ou de designs modernes avec une touche mystique, je m'engage à donner vie à vos idées."
     const runesGroup1 = [
         { rune: "ᚠ Fehu ᚢ Uruz ᚦ Thurisaz ᚨ Ansuz ᚱ Raidho ᚲ Kenaz" },
       ];
@@ -65,8 +65,8 @@ const SecondSection = () => {
         <section className={styles.getout}>
         <div>
             <h1>Ta</h1>
-            <h1>To</h1>
-            <h1><span>T</span>o</h1>
+            <h1>Tt</h1>
+            <h1>oo</h1>
          </div>
      
         <div className={styles.artist}>
@@ -92,7 +92,7 @@ const SecondSection = () => {
                 </div>
                 <div className={styles.divbtngalerie}>
                     <span className={styles.spanHover}>A</span>
-                       <button className={styles.btnGalerie}>Galerie</button>
+                       <button className={styles.btnGalerie}><a href="/galerie">Galerie</a></button>
                 </div>
                 {/* <div className={styles.svgtest}>
                 <AnimatedSvg />
@@ -114,7 +114,7 @@ const SecondSection = () => {
         </section>
         <section className={styles.sectionBtnAbout}>
             <div className={styles.divBtnAbout}>
-                <button className={styles.btnAbout}>A propos</button>
+                <button className={styles.btnAbout}><a href="/about">A propos</a></button>
                 <span className={styles.spanHover}>N</span>
             </div>
             </section>
